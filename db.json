@@ -1,0 +1,91 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Shawshank Redemption",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg",
+      "rating": 9.3,
+      "releaseDate": "1994-09-23",
+      "genre": "Drama",
+      "director": "Frank Darabont",
+      "actors": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+    },
+    {
+      "id": "2",
+      "title": "Inception",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
+      "rating": 8.8,
+      "releaseDate": "2010-07-16",
+      "genre": "Sci-Fi",
+      "director": "Christopher Nolan",
+      "actors": [
+        "Leonardo DiCaprio",
+        "Joseph Gordon-Levitt",
+        "Elliot Page"
+      ],
+      "description": "A thief who enters the dreams of others to steal secrets must plant an idea into a target's subconscious.",
+      "favorite": true
+    },
+    {
+      "id": "3",
+      "title": "The Dark Knight",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
+      "rating": 9,
+      "releaseDate": "2008-07-18",
+      "genre": "Action",
+      "director": "Christopher Nolan",
+      "actors": [
+        "Christian Bale",
+        "Heath Ledger",
+        "Aaron Eckhart"
+      ],
+      "description": "When the menace known as the Joker emerges, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+    },
+    {
+      "id": "4",
+      "title": "Interstellar",
+      "image": "https://upload.wikimedia.org/wikipedia/uk/2/29/Interstellar_film_poster2.jpg",
+      "rating": 8.6,
+      "releaseDate": "2014-11-07",
+      "genre": "Adventure, Drama, Sci-Fi",
+      "director": "Christopher Nolan",
+      "actors": [
+        "Matthew McConaughey",
+        "Anne Hathaway",
+        "Jessica Chastain"
+      ],
+      "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+    },
+    {
+      "id": "5",
+      "title": "Fight Club",
+      "image": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "rating": 8.8,
+      "releaseDate": "1999-10-15",
+      "genre": "Drama",
+      "director": "David Fincher",
+      "actors": [
+        "Brad Pitt",
+        "Edward Norton",
+        "Helena Bonham Carter"
+      ],
+      "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into something much, much more."
+    },
+    {
+      "id": "6",
+      "title": "Charlie and the Chocolate Factory",
+      "image": "https://uaserial.com/images/serials/65/6554bbf6c5c8a084867652.webp",
+      "rating": 6.7,
+      "releaseDate": "2005-07-10",
+      "genre": "Comedy",
+      "director": "Tim Burton",
+      "actors": [
+        "Johnny Depp",
+        "Freddie Highmore",
+        "David Kelly"
+      ],
+      "description": "Charlie, a young boy from an impoverished family, and four other kids win a tour of an amazing chocolate factory run by an imaginative chocolatier, Willy Wonka, and his staff of Oompa-Loompas."
+    }
+  ]
+}
