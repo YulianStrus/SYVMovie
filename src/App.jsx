@@ -14,11 +14,18 @@ function App() {
     const API_URL = import.meta.env.VITE_API_URL;
 
    useEffect(() => {
-      fetch(API_URL)
+      fetch(import.meta.env.VITE_API_URL)
         .then((res) => res.json())
-        .then((data) => setMovies(data))
-        .catch((err) => console.error("Fetch error:", err));
+        .then((data) => {
+          if (Array.isArray(data)) {
+            setMovies(data);
+          } else {
+            console.error("Unexpected API response", data);
+          }
+        })
+        .catch((err) => console.error("API error:", err));
     }, []);
+
 
     const toggleFavorite = (id) => {
         const updatedMovies = movies.map(movie =>
