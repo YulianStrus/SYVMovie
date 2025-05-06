@@ -12,11 +12,11 @@ function App() {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-    useEffect(() => {
-        axios.get("https://json-server-syvmovie.onrender.com/movies")
-            .then(response => setMovies(response.data))
-            .catch(error => console.error("Error fetching movies:", error));
-    }, []);
+   useEffect(() => {
+  fetch("https://json-server-syvmovie.onrender.com/movies")
+    .then(res => res.json())
+    .then(data => setMovies(data));
+}, []);
 
     const toggleFavorite = (id) => {
         const updatedMovies = movies.map(movie =>
