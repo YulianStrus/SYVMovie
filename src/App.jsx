@@ -12,9 +12,10 @@ function App() {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const API_URL = import.meta.env.VITE_API_URL;
+        const BASE_URL = API_URL.replace('/movies', '');
 
    useEffect(() => {
-      fetch(import.meta.env.VITE_API_URL)
+      fetch(API_URL)
         .then((res) => res.json())
         .then((data) => {
           if (Array.isArray(data)) {
@@ -25,17 +26,20 @@ function App() {
         })
         .catch((err) => console.error("API error:", err));
     }, []);
-
-
+    
     const toggleFavorite = (id) => {
-        const updatedMovies = movies.map(movie =>
-            movie.id === id ? { ...movie, favorite: !movie.favorite } : movie
-        );
-        setMovies(updatedMovies);
-
-        const updatedMovie = updatedMovies.find(movie => movie.id === id);
-        axios.patch(`http://localhost:3000/movies/${id}`, { favorite: updatedMovie.favorite })
-            .catch(error => console.error("Error updating favorite status:", error));
+      const updatedMovies = movies.map((movie) =>
+        movie.id === id ? { ...movie, favorite: !movie.favorite } : movie
+      );
+      setMovies(updatedMovies);
+    
+      const updatedMovie = updatedMovies.find((movie) => movie.id === id);
+    
+      axios
+        .patch(`${BASE_URL}/movies/${id}`, {
+          favorite: updatedMovie.favorite,
+        })
+        .catch((error) => console.error("Error updating favorite status:", error));
     };
 
     return (
