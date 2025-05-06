@@ -15,18 +15,26 @@ function App() {
         const BASE_URL = API_URL.replace('/movies', '');
 
    useEffect(() => {
-      fetch(API_URL)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log("Fetched movies:", data);
-          if (Array.isArray(data)) {
-            setMovies(data);
-          } else {
-            console.error("Unexpected API response", data);
-          }
-        })
-        .catch((err) => console.error("API error:", err));
-    }, []);
+  fetch(API_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      if (Array.isArray(data)) {
+        const normalized = data.map((movie, i) => ({
+          id: movie.id || i + 1,
+          title: movie.Title,
+          releaseDate: movie.Released,
+          image: movie.Poster,
+          rating: movie.Rated,
+          favorite: movie.favorite || false,
+        }));
+        setMovies(normalized);
+      } else {
+        console.error("Unexpected API response", data);
+      }
+    })
+    .catch((err) => console.error("API error:", err));
+}, []);
+
     
     const toggleFavorite = (id) => {
       const updatedMovies = movies.map((movie) =>
