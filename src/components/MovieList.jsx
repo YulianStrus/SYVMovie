@@ -7,18 +7,18 @@ function MovieList({ movies, searchTerm, toggleFavorite }) {
             {movies
                 .filter(
                     (movie) =>
-                        movie.title &&
-                        movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+                        movie.Title &&
+                        movie.Title.toLowerCase().includes(searchTerm.toLowerCase())
                 )
                 .map((movie) => (
                     <div key={movie.id} className="movie-card">
-                        <img src={movie.image} alt={movie.title} width="100" />
+                        <img src={movie.Poster} alt={movie.Title} width="100" />
                         <button className="favorite" onClick={() => toggleFavorite(movie.id)}>
                             {movie.favorite ? "★" : "☆"}
                         </button>
-                        <h3>{movie.title}</h3>
-                        <p>Rating: {movie.rating}</p>
-                        <p>Release Date: <br /> {movie.releaseDate}</p>
+                        <h3>{movie.Title}</h3>
+                        <p>Rating: {movie.Rated}</p>
+                        <p>Release Date: <br /> {movie.Released}p>
 
                         <Link to={`/movie/${movie.id}`}>View Details</Link>
                     </div>
