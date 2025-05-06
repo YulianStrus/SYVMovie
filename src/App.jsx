@@ -13,7 +13,7 @@ function App() {
     const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:3000/movies")
+        axios.get("https://json-server-syvmovie.onrender.com/movies")
             .then(response => setMovies(response.data))
             .catch(error => console.error("Error fetching movies:", error));
     }, []);
