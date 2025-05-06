@@ -18,7 +18,7 @@ function MovieList({ movies, searchTerm, toggleFavorite }) {
                         </button>
                         <h3>{movie.title}</h3>
                         <p>Rating: {movie.rated}</p>
-                        <p>Release Date: <br /> {movie.released}<p>
+                        <p>Release Date: <br /> {movie.released}</p>
 
                         <Link to={`/movie/${movie.id}`}>View Details</Link>
                     </div>
