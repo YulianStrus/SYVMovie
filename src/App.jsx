@@ -11,12 +11,14 @@ import "./App.css";
 function App() {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const API_URL = import.meta.env.VITE_API_URL;
 
    useEffect(() => {
-  fetch("https://json-server-syvmovie.onrender.com/movies")
-    .then(res => res.json())
-    .then(data => setMovies(data));
-}, []);
+      fetch(API_URL)
+        .then((res) => res.json())
+        .then((data) => setMovies(data))
+        .catch((err) => console.error("Fetch error:", err));
+    }, []);
 
     const toggleFavorite = (id) => {
         const updatedMovies = movies.map(movie =>
