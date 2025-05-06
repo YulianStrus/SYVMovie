@@ -18,6 +18,7 @@ function App() {
       fetch(API_URL)
         .then((res) => res.json())
         .then((data) => {
+            console.log("Fetched movies:", data);
           if (Array.isArray(data)) {
             setMovies(data);
           } else {
