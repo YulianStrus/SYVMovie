@@ -18,9 +18,11 @@
 - `vite.config.js` — Vite configuration
 - `eslint.config.js` — linting rules
 
-## 📸 Screenshots
+## 🧩 API
 
-*Add screenshots of your UI here to demonstrate key features.*
+This project uses a live mock API powered by JSON Server, hosted on Render:
+
+🔗 https://json-server-syvmovie.onrender.com/movies
 
 ## 🔧 Getting Started
 
